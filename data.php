@@ -11,6 +11,13 @@
         $sqlf ="SELECT * FROM product where type='fruit'";
         $sqls = "SELECT * FROM product where type='spice'";
         $sqlo = "SELECT * FROM `product` where type = 'other';";
+
+        $sqlfav = "SELECT * FROM `favourites` where user = ;";
+
+
+
+
+
 //rsult fetch
         $resultv = mysqli_query($link, $sqlv);
         $resultf = mysqli_query($link, $sqlf);
