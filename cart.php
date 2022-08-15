@@ -152,6 +152,7 @@
 <script>
 	document.getElementById('launch').onclick = function() {
 		window.location.href = "mtcart.php";
+		localStorage.cart
 	}
 </script>
 

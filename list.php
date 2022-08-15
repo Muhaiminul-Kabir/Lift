@@ -40,7 +40,7 @@
                 <div class="py-3">
                     <h5 class="font-weight-bold">Categories</h5>
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"> vegetables <span class="badge badge-primary badge-pill"><?php echo $noOfDatav; ?></span> </li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"> Vegetables <span class="badge badge-primary badge-pill"><?php echo $noOfDatav; ?></span> </li>
                         <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"> Fruits <span class="badge badge-primary badge-pill"><?php echo $noOfDataf; ?></span> </li>
                         <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"> Spices <span class="badge badge-primary badge-pill"><?php echo $noOfDatas; ?></span> </li>
                         <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category">Others <span class="badge badge-primary badge-pill"><?php echo $noOfDatao; ?></span> </li>
@@ -49,7 +49,7 @@
                 <div class="py-3">
                     <h5 class="font-weight-bold">Rating</h5>
                     <form class="rating">
-                        <div class="form-inline d-flex align-items-center py-2"> <label class="tick"><span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <input type="checkbox"> <span class="check"></span> </label> </div>
+                        <div id="x" class="form-inline d-flex align-items-center py-2"> <label class="tick"><span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <input type="checkbox"> <span class="check"></span> </label> </div>
                         <div class="form-inline d-flex align-items-center py-2"> <label class="tick"> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="far fa-star px-1 text-muted"></span> <input type="checkbox"> <span class="check"></span> </label> </div>
                         <div class="form-inline d-flex align-items-center py-2"> <label class="tick"><span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="far fa-star px-1 text-muted"></span> <span class="far fa-star px-1 text-muted"></span> <input type="checkbox"> <span class="check"></span> </label> </div>
                         <div class="form-inline d-flex align-items-center py-2"> <label class="tick"><span class="bi bi-star-fill"></span> <span class="bi bi-star-fill"></span> <span class="far fa-star px-1 text-muted"></span> <span class="far fa-star px-1 text-muted"></span> <span class="far fa-star px-1 text-muted"></span> <input type="checkbox"> <span class="check"></span> </label> </div>
@@ -61,7 +61,7 @@
 
         <section id="products">
             <div class="container py-3">
-                <div class="row">
+                <div id='list' class="row">
 
 
                     <div class="col-lg-6">
@@ -91,6 +91,89 @@
                         </div>
                     </div>
 
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="assets/images/product/product27.png" alt="">
+                                <h2 class="product_name">
+                                    <p>Organic Cauliflower (1kg)</p>
+                                </h2>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <h2 class="price">৳ 200.00</h2>
+                                <div class="btn d-flex justify-content-between align-items-center">
+                                    <a href="" class="add-to-cart-btn">
+                                        <i class="bi bi-cart4"></i> Add to Cart
+                                    </a>
+                                    <a href="" class="add-to-favorite text-success">
+                                        <i class="bi bi-heart "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="assets/images/product/product27.png" alt="">
+                                <h2 class="product_name">
+                                    <p>Organic Cauliflower (1kg)</p>
+                                </h2>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <h2 class="price">৳ 200.00</h2>
+                                <div class="btn d-flex justify-content-between align-items-center">
+                                    <a href="" class="add-to-cart-btn">
+                                        <i class="bi bi-cart4"></i> Add to Cart
+                                    </a>
+                                    <a href="" class="add-to-favorite text-success">
+                                        <i class="bi bi-heart "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="assets/images/product/product27.png" alt="">
+                                <h2 class="product_name">
+                                    <p>Organic Cauliflower (1kg)</p>
+                                </h2>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <h2 class="price">৳ 200.00</h2>
+                                <div class="btn d-flex justify-content-between align-items-center">
+                                    <a href="" class="add-to-cart-btn">
+                                        <i class="bi bi-cart4"></i> Add to Cart
+                                    </a>
+                                    <a href="" class="add-to-favorite text-success">
+                                        <i class="bi bi-heart "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                 </div>
             </div>
@@ -103,7 +186,43 @@
     </div>
 
 
+    <script>
+        document.getElementById('x').onclick = function() {
+            document.getElementById('list').innerHTML += `
+            <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="assets/images/product/product27.png" alt="">
+                                <h2 class="product_name">
+                                    <p>Organic Cauliflower (1kg)</p>
+                                </h2>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <h2 class="price">৳ 200.00</h2>
+                                <div class="btn d-flex justify-content-between align-items-center">
+                                    <a href="" class="add-to-cart-btn">
+                                        <i class="bi bi-cart4"></i> Add to Cart
+                                    </a>
+                                    <a href="" class="add-to-favorite text-success">
+                                        <i class="bi bi-heart "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+
+            
+            
+            `
+
+        }
+    </script>
 
 </body>
 

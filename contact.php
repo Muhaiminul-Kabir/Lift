@@ -16,7 +16,7 @@
         <div class="vh-100 conatiner" style="background-image: url('assets/images/sgp.png'); color: white;">
             <div class="text-center">
                 <h1 class="text-light">How Can We Help You?</h1>
-                <h3 class="text-light section-title" style="">Help us to ensure maximum customer satisfaction</h3>
+                <h3 class="text-light section-title" >Help us to ensure maximum customer satisfaction</h3>
             </div>
             <div class=" d-flex align-items-center justify-content-center">
                 <div class="bg-transparent col-md-4">

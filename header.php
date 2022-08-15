@@ -80,4 +80,13 @@ include 'data.php';
                 }
 
         }
+
+        document.getElementById('cart').onclick = function() {
+                localStorage.cart = '1';
+                        if(localStorage.cart == '1'){window.location.href = "cart.php"}
+                        else{window.location.href = "mtcart.php"}
+        }
+
+
+
 </script>
