@@ -1,3 +1,16 @@
+<?php
+
+if(isset($_POST['submit'])){
+       
+    session_destroy();
+    session_start();
+    $_SESSION['log'] = '';
+       
+    header("Location:index.php");
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -403,6 +416,10 @@
         <img src="assets/images/preloader.svg" alt="">
     </div>
     <script>
+
+    
+
+
         setTimeout(() => {
             document.getElementById('loader').style.display = "none"
         }, 1000)

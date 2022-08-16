@@ -26,7 +26,9 @@
     <div class="wrapper">
         <?php
         include 'header.php';
-        include 'data.php';
+        include 'product_data.php';
+
+
         ?>
         <div>
             <br>
@@ -63,115 +65,45 @@
             <div class="container py-3">
                 <div id='list' class="row">
 
+                    <?php
+                    $j = 0;
 
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <img src="assets/images/product/product27.png" alt="">
-                                <h2 class="product_name">
-                                    <p>Organic Cauliflower (1kg)</p>
-                                </h2>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h2 class="price">৳ 200.00</h2>
-                                <div class="btn d-flex justify-content-between align-items-center">
-                                    <a href="" class="add-to-cart-btn">
-                                        <i class="bi bi-cart4"></i> Add to Cart
-                                    </a>
-                                    <a href="" class="add-to-favorite text-success">
-                                        <i class="bi bi-heart "></i>
-                                    </a>
+                    while ($j < $i) {
+                        $rating = '';
+                        while ((int)$products[$j]->rate--) {
+                            $rating .= '<i class="bi bi-star-fill text-warning"></i>';
+                        }
+
+                        echo '
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <img src="assets/images/product/product27.png" alt="">
+                                        <h2 class="product_name">
+                                            <p>' . $products[$j]->name . '</p>
+                                        </h2>
+                                        <div class="rating">
+                                            ' . $rating . '
+                                        </div>
+                                        <h2 class="price">৳ '.$products[$j]->price.'</h2>
+                                        <div class="btn d-flex justify-content-between align-items-center">
+                                            <a href="" class="add-to-cart-btn">
+                                                <i class="bi bi-cart4"></i> Add to Cart
+                                            </a>
+                                            <a href="" class="add-to-favorite text-success">
+                                                <i class="bi bi-heart "></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        ';
 
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <img src="assets/images/product/product27.png" alt="">
-                                <h2 class="product_name">
-                                    <p>Organic Cauliflower (1kg)</p>
-                                </h2>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h2 class="price">৳ 200.00</h2>
-                                <div class="btn d-flex justify-content-between align-items-center">
-                                    <a href="" class="add-to-cart-btn">
-                                        <i class="bi bi-cart4"></i> Add to Cart
-                                    </a>
-                                    <a href="" class="add-to-favorite text-success">
-                                        <i class="bi bi-heart "></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <img src="assets/images/product/product27.png" alt="">
-                                <h2 class="product_name">
-                                    <p>Organic Cauliflower (1kg)</p>
-                                </h2>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h2 class="price">৳ 200.00</h2>
-                                <div class="btn d-flex justify-content-between align-items-center">
-                                    <a href="" class="add-to-cart-btn">
-                                        <i class="bi bi-cart4"></i> Add to Cart
-                                    </a>
-                                    <a href="" class="add-to-favorite text-success">
-                                        <i class="bi bi-heart "></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        $j++;
+                    }
 
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <img src="assets/images/product/product27.png" alt="">
-                                <h2 class="product_name">
-                                    <p>Organic Cauliflower (1kg)</p>
-                                </h2>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h2 class="price">৳ 200.00</h2>
-                                <div class="btn d-flex justify-content-between align-items-center">
-                                    <a href="" class="add-to-cart-btn">
-                                        <i class="bi bi-cart4"></i> Add to Cart
-                                    </a>
-                                    <a href="" class="add-to-favorite text-success">
-                                        <i class="bi bi-heart "></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    ?>
 
 
 
@@ -185,44 +117,6 @@
 
     </div>
 
-
-    <script>
-        document.getElementById('x').onclick = function() {
-            document.getElementById('list').innerHTML += `
-            <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <img src="assets/images/product/product27.png" alt="">
-                                <h2 class="product_name">
-                                    <p>Organic Cauliflower (1kg)</p>
-                                </h2>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h2 class="price">৳ 200.00</h2>
-                                <div class="btn d-flex justify-content-between align-items-center">
-                                    <a href="" class="add-to-cart-btn">
-                                        <i class="bi bi-cart4"></i> Add to Cart
-                                    </a>
-                                    <a href="" class="add-to-favorite text-success">
-                                        <i class="bi bi-heart "></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-            
-            
-            `
-
-        }
-    </script>
 
 </body>
 

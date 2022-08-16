@@ -1,5 +1,6 @@
 <?php
-include 'data.php';
+        include 'session.php';
+
 ?>
 <header>
 
@@ -37,7 +38,7 @@ include 'data.php';
                                         <li class="nav-item">
                                                 <a class="nav-link" id="cart">
                                                         <i class="bi bi-cart4 position-relative">
-                                                                <span style="font-size: 12px" id="cart-icon" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?php echo $noOfDatav; ?>
+                                                                <span style="font-size: 12px" id="cart-icon" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0
                                                                 </span>
                                                         </i>
                                                 </a>
@@ -48,6 +49,8 @@ include 'data.php';
                                                 </a>
                                                 <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
                                                         <li><a id="log" class="dropdown-item" href="login.php">Login</a></li>
+                                                       <form method="post"> <li><input type="submit" name="submit" id="out" class="dropdown-item" value="Log out"></input></li>
+                                                        </form>
                                                         <li><a id="reg" class="dropdown-item" href="register.php">Register</a></li>
 
                                                         <li><a id="mp" class="dropdown-item" href="profile.php">My profile</a></li>
@@ -58,35 +61,56 @@ include 'data.php';
                 </div>
         </nav>
 </header>
-<script>
-        //localStorage.setItem("log", "on");
-        if (localStorage.log == 'on') {
+<?php
 
+//localStorage.setItem("log", "on");
+       
+        if ($_SESSION['log'] == 'on') {
+
+
+        echo "<script>
+                
                 document.getElementById('cart').onclick = function() {
-                        window.location.href = "cart.php"
+                        window.location.href = 'cart.php'
                 }
-
                 document.getElementById('reg').style.display = 'none';
-                document.getElementById('log').innerText = "Log out";
+                document.getElementById('out').style.display = 'block';
+                
+                
+
+                document.getElementById('log').style.display = 'none';
+                
                 document.getElementById('mp').style.display = 'block';
                 document.getElementById('cart-icon').style.display = 'block';
+                
+document.getElementById('cart').onclick = function() {
+        localStorage.cart = '1';
+                if(localStorage.cart == '1'){window.location.href = 'cart.php'}
+                else{window.location.href = 'mtcart.php'}
+};
+                
+        </script>";
         } else {
-                document.getElementById('reg').style.display = 'block';
-                document.getElementById('log').innerText = "Log in";
+                echo
+                "<script>document.getElementById('reg').style.display = 'block';
                 document.getElementById('mp').style.display = 'none';
+                
+                document.getElementById('out').style.display = 'none';
+                
+                document.getElementById('log').style.display = 'block';
+                document.getElementById('out').onclick = function() {
+                   
+                        window.location.href = 'index.php';
+                }
                 document.getElementById('cart-icon').style.display = 'none';
                 document.getElementById('cart').onclick = function() {
-                        window.location.href = "login.php"
-                }
+                        window.location.href = 'login.php';
+                }</script>";
 
         }
 
-        document.getElementById('cart').onclick = function() {
-                localStorage.cart = '1';
-                        if(localStorage.cart == '1'){window.location.href = "cart.php"}
-                        else{window.location.href = "mtcart.php"}
-        }
 
 
 
-</script>
+
+?>

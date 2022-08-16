@@ -24,11 +24,21 @@
                             <h3 class="text-white">Create Account</h3>
                         </div>
                         <div class="p-4">
-                            <form action="">
+                            <form action="" method="post">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text bg-transparent"><i
                                             class="bi bi-person-plus-fill text-white"></i></span>
                                     <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-transparent"><i
+                                            class="bi bi-person-plus-fill text-white"></i></span>
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-transparent"><i
+                                            class="bi bi-person-plus-fill text-white"></i></span>
+                                    <input type="text" class="form-control" placeholder="Mobile">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text bg-transparent"><i
@@ -41,7 +51,7 @@
                                     <input type="password" class="form-control" placeholder="password">
                                 </div>
                                 <div class="d-grid col-12 mx-auto">
-                                    <button class="btn btn-success" type="button"><span></span> Sign up</button>
+                                    <input class="btn bg-success text-warning" style="border: none; border-radius: 5px;" type="submit" value="Sign up"></input>
                                 </div>
                                 <p class="text-center mt-3 text-white">Already have an account?
                                     <a class="text-warning"href="login.php">Sign in</a>
