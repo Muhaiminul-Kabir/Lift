@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2022 at 07:47 AM
+-- Generation Time: Aug 28, 2022 at 07:59 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `lift`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `pass`) VALUES
+(1, 'admin_001', '12345');
 
 -- --------------------------------------------------------
 
@@ -49,15 +68,49 @@ CREATE TABLE `favourites` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` int(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  `reply` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `user_email`, `subject`, `text`, `reply`) VALUES
+(1, 'q@gmail.com', 'mara', 'vai valo nai', ''),
+(3, 'q@gmail.com', 'mara', 'vai valo nasjhdjsd sjdbjhdsf fjsbdfjbsjkdfdbfsdkfsdkjsdfkskfkhdkfkshdfkkdnkvhdkbvbi', ''),
+(4, '', '', '', ''),
+(5, '', '', '', ''),
+(6, '', '', '', 'tate amar ki');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
   `Id` int(100) NOT NULL,
-  `user` varchar(100) NOT NULL,
-  `paid` int(1) NOT NULL,
-  `del` int(1) NOT NULL
+  `address` varchar(255) NOT NULL,
+  `items` int(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`Id`, `address`, `items`, `user_email`, `status`) VALUES
+(2, 'e', 3, '3', '3'),
+(3, 'e', 3, '3', '3');
 
 -- --------------------------------------------------------
 
@@ -82,7 +135,16 @@ INSERT INTO `product` (`Id`, `Name`, `Price`, `Ratings`, `type`, `path`) VALUES
 (1, 'Radish', 234, 2, 'vegi', ''),
 (3, 'carrot', 234, 2, 'vegi', ''),
 (4, 'Radish', 234, 2, 'vegi', ''),
-(5, 'tomato', 234, 2, 'fruit', '');
+(5, 'tomato', 234, 2, 'fruit', ''),
+(6, '${name}', 0, 0, '${type}', '${path}'),
+(7, '$name', 0, 0, '$type', '$path'),
+(8, '2', 2, 0, 'Vegitables', '2'),
+(9, 'Md. Muhaiminul Kabir ', 1, 0, 'Vegitables', '1'),
+(10, 'sfdsfd', 23323, 0, '2', 'C:fakepathoffer-bg.png'),
+(11, '', 0, 0, 'Vegitables', ''),
+(12, '', 0, 0, 'Vegitables', ''),
+(13, '', 0, 0, 'Vegitables', 'C:fakepathproduct3.png'),
+(14, 'Eggs (4 pcs)', 150, 0, '4', 'C:fakepathproduct2.png');
 
 -- --------------------------------------------------------
 
@@ -105,11 +167,23 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Id`, `Name`, `email`, `pass`, `Address`, `Mobile`, `path`) VALUES
-(1, 'Shuvo', 'q@gmail.com', '1234', 'wewew', '012912812', '');
+(1, 'Nirjon', 'q@gmail.com', '1234', 'wewew', '012912812', ''),
+(3, 'ssds', 'sdsd', 'sdsd', 'sdsd', 'sdsd', 'sdsd'),
+(4, '1', '1', '1', '1', '1', '1'),
+(7, 'sSs', 'sS', 'sS', 'sS', 'sd', 'ss'),
+(15, '${name}', 'ssS', 'asS', 'asS', 'asd', 'ass'),
+(39, '${name}', 'sxsS', 'axsS', 'axsS', 'axsd', 'axss');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `y` (`name`);
 
 --
 -- Indexes for table `carts`
@@ -122,6 +196,12 @@ ALTER TABLE `carts`
 --
 ALTER TABLE `favourites`
   ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
@@ -147,22 +227,40 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `favourites`
 --
 ALTER TABLE `favourites`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

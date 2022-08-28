@@ -1,5 +1,5 @@
 <?php
-        include 'session.php';
+session_start();
 
 ?>
 <header>
@@ -19,13 +19,13 @@
                                                 <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href="list.php">Categories</a>
+                                                <a class="nav-link" href="list.php">Shop</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link " href="adminlog.php">Admin panel</a>
+                                                <a class="nav-link" href="contact.php">Contact us</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link " href="#">About</a>
+                                                <a class="nav-link " href="#">About us</a>
                                         </li>
                                 </ul>
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 action-menu">
@@ -49,7 +49,8 @@
                                                 </a>
                                                 <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
                                                         <li><a id="log" class="dropdown-item" href="login.php">Login</a></li>
-                                                       <form method="post"> <li><input type="submit" name="submit" id="out" class="dropdown-item" value="Log out"></input></li>
+                                                        <form method="post">
+                                                                <li><input type="submit" name="submit" id="out" class="dropdown-item" value="Log out"></input></li>
                                                         </form>
                                                         <li><a id="reg" class="dropdown-item" href="register.php">Register</a></li>
 
@@ -64,8 +65,8 @@
 <?php
 
 //localStorage.setItem("log", "on");
-       
-        if ($_SESSION['log'] == 'on') {
+
+if ($_SESSION['log'] == 'on') {
 
 
         echo "<script>
@@ -90,9 +91,9 @@ document.getElementById('cart').onclick = function() {
 };
                 
         </script>";
-        } else {
-                echo
-                "<script>document.getElementById('reg').style.display = 'block';
+} else {
+        echo
+        "<script>document.getElementById('reg').style.display = 'block';
                 document.getElementById('mp').style.display = 'none';
                 
                 document.getElementById('out').style.display = 'none';
@@ -106,8 +107,7 @@ document.getElementById('cart').onclick = function() {
                 document.getElementById('cart').onclick = function() {
                         window.location.href = 'login.php';
                 }</script>";
-
-        }
+}
 
 
 

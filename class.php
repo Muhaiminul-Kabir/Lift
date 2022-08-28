@@ -17,6 +17,38 @@ class user
 
 
 
+class fb
+{
+        public $id;
+        public $user_email;
+        public $subject;
+        public $text;
+        
+        
+
+
+
+}
+
+
+class order
+{
+        public $id;
+        public $paid;
+        public $del;
+        public $user_email;
+        public $address;
+        
+
+
+
+}
+
+class cart
+{
+
+
+}
 
 
 class pt

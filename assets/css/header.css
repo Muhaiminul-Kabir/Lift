@@ -27,3 +27,25 @@ header nav {
         margin: 0px 20px;
         font-size: 18px;
       }
+      
+.bb {
+  color: #666;
+  display: inline-block;
+  margin: 0;
+}
+
+.bb:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #03fcc6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.bb:hover:after {
+  transform: scaleX(1);
+}
+
+.bb:after {
+  transform-origin: 0% 50%;
+}

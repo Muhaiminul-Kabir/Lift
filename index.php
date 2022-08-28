@@ -1,11 +1,11 @@
 <?php
 
-if(isset($_POST['submit'])){
-       
+if (isset($_POST['submit'])) {
+
     session_destroy();
     session_start();
     $_SESSION['log'] = '';
-       
+
     header("Location:index.php");
 }
 ?>
@@ -16,8 +16,7 @@ if(isset($_POST['submit'])){
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lift</title>
     <link rel="icon" href="assets/images/favicon.png">
@@ -29,8 +28,8 @@ if(isset($_POST['submit'])){
 
 <body>
     <!--Header section-->
-    <?php    include 'header.php' ?>
-    
+    <?php include 'header.php' ?>
+
     <!--Slider Section-->
     <section class="slider">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -54,13 +53,11 @@ if(isset($_POST['submit'])){
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -372,7 +369,7 @@ if(isset($_POST['submit'])){
             </div>
         </div>
     </section>
-    
+
     <!--Footer section-->
     <footer class="border-top py-5">
         <div class="container">
@@ -385,7 +382,7 @@ if(isset($_POST['submit'])){
                     <h4>Information</h4>
                     <ul class="footer-list">
                         <li><a href="">About us</a></li>
-                       <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -394,7 +391,7 @@ if(isset($_POST['submit'])){
                         <li><a href="">My account</a></li>
                         <li><a href="">My Cart</a></li>
                         <li><a href="login.php">Login</a></li>
-                        <li><a href="adminlog.php">Admin login</a></li>
+                        <li><a  id="to-admin-panel">Admin login</a></li>
                         <li><a href="">Checkout</a></li>
                     </ul>
                 </div>
@@ -415,15 +412,11 @@ if(isset($_POST['submit'])){
     <div class="loading" id="loader">
         <img src="assets/images/preloader.svg" alt="">
     </div>
-    <script>
-
-    
 
 
-        setTimeout(() => {
-            document.getElementById('loader').style.display = "none"
-        }, 1000)
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="assets/js/header.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
 
