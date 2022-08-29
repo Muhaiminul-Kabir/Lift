@@ -19,10 +19,10 @@ $email = "";
 
 $sqlx = "SELECT * FROM product";
 
-$sqlv = "SELECT * FROM product where type='vegi'";
-$sqlf = "SELECT * FROM product where type='fruit'";
-$sqls = "SELECT * FROM product where type='spice'";
-$sqlo = "SELECT * FROM `product` where type = 'other';";
+$sqlv = "SELECT * FROM product where type='Vegetables'";
+$sqlf = "SELECT * FROM product where type='Fruits'";
+$sqls = "SELECT * FROM product where type='Spices'";
+$sqlo = "SELECT * FROM `product` where type = 'Others';";
 
 $sqlfav = "SELECT * FROM `favourites` where user = ;";
 
@@ -59,10 +59,10 @@ $i = 0;
 
 while ($row = mysqli_fetch_array($resultx)) {
         $products[$i] = new pt();
-        $products[$i]->id = $row['Id'];
+        $products[$i]->code = $row['code'];
         $products[$i]->name = $row['Name'];
         $products[$i]->price = $row['Price'];
-        $products[$i]->rate = $row['Ratings'];
+        $products[$i]->qty = $row['qty'];
         $products[$i]->path = $row['path'];
        
         $products[$i]->type = $row['type'];

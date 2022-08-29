@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'cart_data.php';
 
 ?>
 <header>
@@ -34,7 +34,7 @@ session_start();
 
                                         <li id="init-element" class="nav-item">
 
-                                                <button type="button" id="to-login" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                <button type="button" id="to-login" class="btn btn-secondary text-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                         Log in
                                                 </button>
                                                 
@@ -43,14 +43,14 @@ session_start();
                                                 </button>
                                         </li>
                                         <li class="nav-item" id="fav">
-                                                <a class="nav-link" href="#">
+                                                <a class="nav-link" href="fav_list.php">
                                                         <i class="bi bi-heart"></i>
                                                 </a>
                                         </li>
                                         <li id="cart" class="nav-item">
-                                                <a class="nav-link" >
+                                                <a class="nav-link" href="cart.php" >
                                                         <i class="bi bi-cart4 position-relative">
-                                                                <span style="font-size: 12px" id="cart-icon" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0
+                                                                <span style="font-size: 12px" id="cart-icon" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?php echo $num; ?>
                                                                 </span>
                                                         </i>
                                                 </a>
@@ -64,7 +64,6 @@ session_start();
 
                                                         <li><a id="mp" class="dropdown-item" href="profile.php">Profile</a></li>
                                                         <li><a id="mp" class="dropdown-item" href="profile.php">Reports</a></li>
-                                                        <li><a id="mp" class="dropdown-item" href="profile.php">Orders</a></li>
                                                         <button type="button" id="log-out" class="dropdown-item">
                                                                 <i class="bi bi-box-arrow-left"></i>
                                                                 Log out</button>

@@ -23,7 +23,7 @@
 
     <?php
     include 'header.php';
-    include 'product_data.php';
+    include 'product_data_1.php';
 
 
     ?>
@@ -41,13 +41,8 @@
         <div class="content py-md-0 py-3">
             <section id="sidebar">
                 <div class="py-3">
-                    <h5 class="font-weight-bold">Categories</h5>
-                    <ul class="list-group">
-                        <li id="choice1" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="0"> Vegetables <span class="badge badge-primary badge-pill"><?php echo $noOfDatav; ?></span> </li>
-                        <li id="choice2" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="1"> Fruits <span class="badge badge-primary badge-pill"><?php echo $noOfDataf; ?></span> </li>
-                        <li id="choice3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="2"> Spices <span class="badge badge-primary badge-pill"><?php echo $noOfDatas; ?></span> </li>
-                        <li id="choice4" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="3">Others <span class="badge badge-primary badge-pill"><?php echo $noOfDatao; ?></span> </li>
-                    </ul>
+                    <h5 class="font-weight-bold">Favourites</h5>
+                    Total <span class="badge badge-primary badge-pill"><?php echo $noOfDatav; ?></span>
                 </div>
 
             </section>
@@ -79,8 +74,8 @@
                                             <a onclick="return add(\'' . $products[$j]->code . '\',' . $products[$j]->price . ')"  class="add-to-cart-btn">
                                                 <i class="bi bi-cart4"></i> Add to Cart
                                             </a>
-                                            <a  class="add-to-favorite text-success">
-                                                <i class="bi bi-heart "></i>
+                                            <a onclick="return addf(\'' . $products[$j]->code . '\',)" class="add-to-favorite text-success">
+                                                <i class="bi bi-heart-fill "></i>
                                             </a>
                                         </div>
                                     </div>
@@ -150,80 +145,36 @@
             }
 
         }
-        $(document).ready(function() {
+        function addf(pname) {
             
-            $('.add-to-favorite').click(function(e) {
+            code = pname            
+            
+           
+            alert(localStorage.userEmail);
 
+            if (localStorage.log == 'on') {
+                
                 $.ajax({
                     type: "POST",
                     url: "addToFav_product_module.php",
                     data: {
-                        choice: $("#choice1").val()
+
+                        product_code: code,
+                        product_user: localStorage.userEmail,
+                        
+                        
                     },
                     success: function(result, status, xhr) {
 
-                        $("#list").html(result);
+                        $("#error").html(result);
                     }
                 });
-            });
+            } else {
+                $('#staticBackdrop').modal('show');
 
-            $('#choice1').click(function(e) {
+            }
 
-                $.ajax({
-                    type: "POST",
-                    url: "filterChoice_product_module.php",
-                    data: {
-                        choice: $("#choice1").val()
-                    },
-                    success: function(result, status, xhr) {
-
-                        $("#list").html(result);
-                    }
-                });
-            });
-            $('#choice2').click(function(e) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "filterChoice_product_module.php",
-                    data: {
-                        choice: $("#choice2").val()
-                    },
-                    success: function(result, status, xhr) {
-
-                        $("#list").html(result);
-                    }
-                });
-            });
-            $('#choice3').click(function(e) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "filterChoice_product_module.php",
-                    data: {
-                        choice: $("#choice3").val()
-                    },
-                    success: function(result, status, xhr) {
-
-                        $("#list").html(result);
-                    }
-                });
-            });
-            $('#choice4').click(function(e) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "filterChoice_product_module.php",
-                    data: {
-                        choice: $("#choice4").val()
-                    },
-                    success: function(result, status, xhr) {
-
-                        $("#list").html(result);
-                    }
-                });
-            });
-        });
+        }
     </script>
 
 

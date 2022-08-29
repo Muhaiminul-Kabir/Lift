@@ -33,7 +33,7 @@ class fb
 
 class order
 {
-        public $id;
+        public $code;
         public $paid;
         public $del;
         public $user_email;
@@ -46,7 +46,8 @@ class order
 
 class cart
 {
-
+        public $pname;
+        public $price;
 
 }
 
@@ -54,11 +55,11 @@ class cart
 class pt
 {
         // Properties
-        public $id;
+        public $code;
         public $name;
         public $price;
         public $path;
-        public $rate;
+        public $qty;
         public $type;
         // Methods
         function set_name($name)

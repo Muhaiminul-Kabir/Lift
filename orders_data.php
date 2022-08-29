@@ -44,8 +44,8 @@ while ($row = mysqli_fetch_array($resultx)) {
         
         $orders[$i] = new order();
         
-        $orders[$i]->id = $row['Id'];
-        $orders[$i]->items = $row['items'];
+        $orders[$i]->code = $row['code'];
+        $orders[$i]->items = $row['product_code'];
         $orders[$i]->status = $row['status'];
         $orders[$i]->user_email = $row['user_email'];
         $orders[$i]->address = $row['address'];

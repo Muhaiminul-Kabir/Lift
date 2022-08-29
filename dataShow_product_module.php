@@ -12,7 +12,7 @@ function product_list()
 
                 echo '<tr >
                     <td>' . $products[$j]->name . '</td>
-                    <td>' . $products[$j]->id . '</td>
+                    <td>' . $products[$j]->code. '</td>
                     <td>' . $products[$j]->price . '</td>
                     <td>' . $products[$j]->type . '</td>
                     <td>' . $products[$j]->rate . '</td>

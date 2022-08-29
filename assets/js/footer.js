@@ -1,4 +1,6 @@
-
+setTimeout(function () {
+        document.getElementById('error').style.display = 'none';
+    }, 5000);
 var el = document.getElementById('to-admin-panel');
 if (el != '') {
 

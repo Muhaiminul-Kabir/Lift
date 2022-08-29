@@ -11,13 +11,13 @@ function order_list()
                 $rating = '';
 
                 echo '<tr >
-                    <td>' . $orders[$j]->id . '</td>
+                    <td>' . $orders[$j]->code . '</td>
                     <td>' . $orders[$j]->items . '</td>
                     <td>' . $orders[$j]->status . '</td>
                     <td>' . $orders[$j]->user_email . '</td>
                     <td>' . $orders[$j]->address . '</td>
             
-                    <td><button class="text-light shadow btn btn-danger">Cancel</button></td> 
+                    <td><button class="text-light shadow btn btn-danger">Approve</button></td> 
                   </tr>';
 
 

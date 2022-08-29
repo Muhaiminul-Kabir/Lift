@@ -97,13 +97,20 @@ session_start();
         $(document).ready(function() {
             $('.add').click(function(e) {
                 console.log("add button clicked");
+                var value = document.getElementById('qty').value;
+                var unit = $('#inputGroupSelect02 :selected').text();;
+
+                var qty = value +' '+unit;
+                
                 $.ajax({
                     type: "POST",
                     url: "dataInsert_product_module.php",
                     data: {
+                        product_code: $("#code").val(),
                         product_name: $("#name").val(),
                         product_path: $("#path").val(),
-                        product_type: $("#inputGroupSelect01").val(),
+                        product_type: $("#inputGroupSelect01 :selected").text(),
+                        product_qty: qty,
                         product_price: $("#price").val()
 
                     },

@@ -232,9 +232,7 @@ img{
 .clear{
     clear: both;
 }
-.btn.btn-success{
-    visibility: hidden;
-}
+
 @media(min-width:992px){
     .filter,#mobile-filter{
         display: none;
@@ -286,13 +284,7 @@ img{
         float: left;
         width: 80%;
     }
-    .btn.btn-success{
-        visibility: visible;
-        margin: 10px 0px;
-        color: #fff;
-        padding: 0.2rem 0.1rem;
-        width: 20%;
-    } 
+   
     .green-label{
         width: 50%;
     }
