@@ -34,7 +34,7 @@
                 <div class="my-3 x" style="height:300px">
                         <div class="v1">
 
-                                <h5 id="p" style="max-width:450px;word-wrap:break-word;"> </h5>
+                                <h5 id="pa" style="max-width:450px;word-wrap:break-word;"></h5>
 
                         </div>
                 </div>
@@ -61,19 +61,20 @@
                 setTimeout(function() {
                         document.getElementById('error').style.display = 'none';
                 }, 5000);
-                document.getElementById("p").innerHTML = localStorage.text;
+                document.getElementById("pa").innerHTML += localStorage.text;
                 document.getElementById("e").innerHTML += localStorage.email;
 
                 $(document).ready(function() {
 
 
                         $('#rpb').click(function(e) {
+                                alert($("#pa").val());
                                 $.ajax({
                                         type: "POST",
                                         url: "reply_msg_module.php",
                                         data: {
                                                 reply: $("#reply").val(),
-                                                msg: $("#p").val()
+                                                msg: document.getElementById("pa").textContent
                                                 
                                         },
                                         success: function(result, status, xhr) {

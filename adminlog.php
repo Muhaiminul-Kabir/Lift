@@ -89,7 +89,7 @@
             $("#error").html(result)
             console.log("result ->"+result);
             if(result == ''){
-              localStorage.ad_log ="true";
+              localStorage.ad_log ="true"
               location.replace("admin.php")
             }
           }

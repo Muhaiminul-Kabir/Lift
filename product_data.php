@@ -59,7 +59,7 @@ $i = 0;
 
 while ($row = mysqli_fetch_array($resultx)) {
         $products[$i] = new pt();
-        
+        $products[$i]->id = $row['Id'];
         $products[$i]->name = $row['Name'];
         $products[$i]->price = $row['Price'];
         $products[$i]->rate = $row['Ratings'];
