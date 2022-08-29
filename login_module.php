@@ -45,20 +45,34 @@ function login()
       $_SESSION['userMobile'] = $user->mobile;
       $_SESSION['userEmail'] = $user->email;
       $_SESSION['userPath'] = $user->path;
-     
+      
       $_SESSION['log'] = 'on';
-      echo '<script>document.getElementById("error").style.display = "block";</script>';
+      echo '<script>document.getElementById("error").style.visibility = "visible";</script>';
+      echo '
+      <script>
+      $(".close").click();
+     
+      localStorage.log = "on"
+      document.getElementById("init-element").style.visibility = "hidden"
+      document.getElementById("user-panel").style.visibility = "visible"
+      
+      document.getElementById("fav").style.visibility = "visible"
+      document.getElementById("cart").style.visibility = "visible"
+      setTimeout(function () {
+  
+        document.getElementById("error").style.visibility = "hidden"
+        
+      }, 5000)
+
+    </script>';
       echo '<div class="fixed-top alert alert-success alert-dismissible fade show" role="alert";>
-      <strong>Login successful!</strong> Welcome <b>'.$user->name.'</b>
+      <strong>Login successful!</strong> Welcome <b>' . $user->name . '</b>
       
       </div>';
-      
     } else {
       echo "<script>document.getElementById('warn').innerText = 'Incorrect password'</script>";
-
     }
   }
 }
 
 login();
-?>

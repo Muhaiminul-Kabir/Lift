@@ -409,9 +409,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </footer>
-    <div class="loading" id="loader">
-        <img src="assets/images/preloader.svg" alt="">
-    </div>
+   
 
 
     <!-- Modal -->
@@ -420,7 +418,7 @@ if (isset($_POST['submit'])) {
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <input type="text" name="" id="email" class="form-control my-4 py-2" placeholder="Email" />
@@ -434,32 +432,38 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+    </div>
+    <!--Error-->
+    <div style="" id="error"></div>
 
-        <!--Error-->
-        <div style="" id="error"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        document.getElementById("user-panel").style.visibility = "hidden"
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#login').click(function(e) {
-                    $.ajax({
-                        type: "POST",
-                        url: "login_module.php",
-                        data: {
-                            email: $("#email").val(),
-                            pass: $("#pass").val()
-                        },
-                        success: function(result, status, xhr) {
-                            $("#error").html(result);
-                            
-                        }
-                    });
+        document.getElementById("fav").style.visibility = "hidden"
+        document.getElementById("cart").style.visibility = "hidden"
+        $(document).ready(function() {
+            $('#login').click(function(e) {
+                $.ajax({
+                    type: "POST",
+                    url: "login_module.php",
+                    data: {
+                        email: $("#email").val(),
+                        pass: $("#pass").val()
+                    },
+                    success: function(result, status, xhr) {
+                        $("#error").html(result)
+
+
+
+                    }
                 });
-            })
-        </script>
+            });
+        })
+    </script>
 
-        <script src="assets/js/header.js"></script>
-        <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

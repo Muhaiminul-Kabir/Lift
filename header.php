@@ -16,7 +16,7 @@ session_start();
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                                                <a class="nav-link" aria-current="page" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
                                                 <a class="nav-link" href="list.php">Shop</a>
@@ -30,31 +30,44 @@ session_start();
                                 </ul>
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 action-menu">
 
-                                        <li class="nav-item">
+                                        
+
+                                        <li id="init-element" class="nav-item">
+
+                                                <button type="button" id="to-login" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                        Log in
+                                                </button>
+                                                
+                                                <button type="button" id="to-regi" class="btn btn-warning">
+                                                        Sign up
+                                                </button>
+                                        </li>
+                                        <li class="nav-item" id="fav">
                                                 <a class="nav-link" href="#">
                                                         <i class="bi bi-heart"></i>
                                                 </a>
                                         </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link" id="cart">
+                                        <li id="cart" class="nav-item">
+                                                <a class="nav-link" >
                                                         <i class="bi bi-cart4 position-relative">
                                                                 <span style="font-size: 12px" id="cart-icon" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0
                                                                 </span>
                                                         </i>
                                                 </a>
                                         </li>
-                                        <li class="nav-item dropdown">
+                                        <li id="user-panel" class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         <i class="bi bi-person"></i>
                                                 </a>
                                                 <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
-                                                        
-                                                <button type="button" class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                        Log in
-                                                </button>
-                                                        <li><a id="reg" class="dropdown-item" href="register.php">Register</a></li>
 
-                                                        <li><a id="mp" class="dropdown-item" href="profile.php">My profile</a></li>
+
+                                                        <li><a id="mp" class="dropdown-item" href="profile.php">Profile</a></li>
+                                                        <li><a id="mp" class="dropdown-item" href="profile.php">Reports</a></li>
+                                                        <li><a id="mp" class="dropdown-item" href="profile.php">Orders</a></li>
+                                                        <button type="button" id="log-out" class="dropdown-item">
+                                                                <i class="bi bi-box-arrow-left"></i>
+                                                                Log out</button>
                                                 </ul>
                                         </li>
                                 </ul>
@@ -62,7 +75,3 @@ session_start();
                 </div>
         </nav>
 </header>
-<?php
-
-
-?>
