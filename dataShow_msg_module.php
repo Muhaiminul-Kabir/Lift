@@ -1,6 +1,5 @@
 <?php
 
-
 function msg_list()
 {
         include 'msg_data.php';
@@ -27,4 +26,5 @@ function msg_list()
                 $j++;
         }
 }
+
 ?>

@@ -146,6 +146,18 @@ function toReply(text,email) {
 
 }
 
+function see(text,reply) {
+    localStorage.text = text
+    localStorage.reply = email
+    location.replace('sp_q.php')
+
+
+
+
+
+}
+
+
 
 
 

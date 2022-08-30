@@ -1,5 +1,5 @@
 <?php
- 
+
 ?>
 
 
@@ -37,9 +37,9 @@
 					</h4>
 					<ul class="list-group mb-3">
 
-						<?php 
-include 'dataShow_cart_module.php';
- ?>
+						<?php
+						include 'dataShow_cart_module.php';
+						?>
 						<li class="list-group-item d-flex justify-content-between">
 							<span>Total (Taka)</span>
 							<strong><?php echo $total; ?></strong>
@@ -74,7 +74,7 @@ include 'dataShow_cart_module.php';
 						</div>
 
 						<hr class="mb-4">
-						<button class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
+						<button id="chk" class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
 						</form>
 					</div>
 				</div>
@@ -84,7 +84,33 @@ include 'dataShow_cart_module.php';
 
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+	<script>
+		$(document).ready(function() {
+			$('#chk').click(function(e) {
 
+				$.ajax({
+					type: "POST",
+					url: "checkout_module.php",
+					data: {
+
+
+
+					},
+					success: function(result, status, xhr) {
+						location.replace('mtcart.php')
+
+					}
+				});
+			});
+
+
+
+
+		});
+	</script>
 </body>
 
 </html>

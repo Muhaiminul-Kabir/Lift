@@ -1,14 +1,4 @@
-<?php
 
-if (isset($_POST['submit'])) {
-
-    session_destroy();
-    session_start();
-    $_SESSION['log'] = '';
-
-    header("Location:index.php");
-}
-?>
 
 
 <!doctype html>
@@ -42,10 +32,8 @@ if (isset($_POST['submit'])) {
                                 <h2 class="text-success">
                                     Don't panic<br><span class="lighten">Just</span>, do <br>
                                     <span class="lighten">Lift</span>
-                                </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur illo
-                                    laborum optio porro quis reiciendis rerum sapiente velit veniam.</p>
-                                <a href="list.php" class="btn-order-now">Order Now</a>
+                                </h2><br><br><br>
+                               <a href="list.php" class="btn-order-now">Order Now</a>
                             </div>
                             <div class="col-lg-6 slider-image">
                                 <img src="assets/images/product/f1.png" class="d-block w-100" alt="...">
@@ -69,22 +57,13 @@ if (isset($_POST['submit'])) {
         <div class="container">
             <div class="section-title text-center">
                 <h2>Category Products</h2>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
+                <p class="text-muted">Buy products from various catagories.</p>
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <img src="assets/images/product/product22.png" alt="">
-                            <h4>Vegetables</h4>
-                            <a href="list.php" class="view-all-btn">View All <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <img src="assets/images/product/product23.png" alt="">
                             <h4>Fruits</h4>
                             <a href="list.php" class="view-all-btn">View All <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -93,8 +72,17 @@ if (isset($_POST['submit'])) {
                 <div class="col-lg-3">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <img src="assets/images/product/product27.png" alt="">
+                            <img src="assets/images/product/product23.png" alt="">
                             <h4>Spices</h4>
+                            <a href="list.php" class="view-all-btn">View All <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <img src="assets/images/product/product27.png" alt="">
+                            <h4>Vegetables</h4>
                             <a href="list.php" class="view-all-btn">View All <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -164,12 +152,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -179,7 +165,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product23.png" alt="">
                             <h2 class="product_name">
-                                <a href="">Organic Cauliflower (1kg)</a>
+                                <a href="">Onion (1kg)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -190,12 +176,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -216,12 +200,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -231,7 +213,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product28.png" alt="">
                             <h2 class="product_name">
-                                <a href="">Organic Cauliflower (1kg)</a>
+                                <a href="">Garlic (1kg)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -242,12 +224,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -266,7 +246,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product1.png" alt="">
                             <h2 class="product_name">
-                                <a href="">Organic Cauliflower (1kg)</a>
+                                <a href="">Rice (1kg)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -277,12 +257,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -292,7 +270,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product2.png" alt="">
                             <h2 class="product_name">
-                                <a href="">Organic Cauliflower (1kg)</a>
+                                <a href="">Egg (12 pcs)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -303,12 +281,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -318,7 +294,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product3.png" alt="">
                             <h2 class="product_name">
-                                <a href="">Fresh Carrot (1 kg)</a>
+                                <a href="">Apple (1 kg)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -329,12 +305,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -344,7 +318,7 @@ if (isset($_POST['submit'])) {
                         <div class="card-body text-center">
                             <img src="assets/images/product/product4.png" height="40" alt="">
                             <h2 class="product_name">
-                                <a href="">Organic Cauliflower (1kg)</a>
+                                <a href="">Indian onions (1kg)</a>
                             </h2>
                             <div class="rating">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -355,12 +329,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <h2 class="price">৳ 200.00</h2>
                             <div class="btn d-flex justify-content-between align-items-center">
-                                <a href="" class="add-to-cart-btn">
-                                    <i class="bi bi-cart4"></i> Add to Cart
+                                <a href="list.php" class="add-to-cart-btn">
+                                    <i class="bi bi-cart4"></i>Start shopping
                                 </a>
-                                <a href="" class="add-to-favorite text-success">
-                                    <i class="bi bi-heart "></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -392,19 +364,19 @@ if (isset($_POST['submit'])) {
                         <li><a href="">My Cart</a></li>
                         <li><a href="login.php">Login</a></li>
                         <li><a onclick="showFoo()" id="to-admin-panel">Admin login</a></li>
-                        <li><a href="">Checkout</a></li>
+                     
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h4>Contact Info</h4>
-                    <p>07577985281</p>
-                    <p>509 724 580 - issued in New York (NY) on 03/11/2019, expires 08/11/2023</p>
-                    <p>support@eshop.com</p>
+                    <p>01707273738</p>
+                    <p>509 724 580 - issued in Dhaka (DHA) on 03/11/2022, expires 08/11/2023</p>
+                    <p>support@lift.com</p>
                 </div>
             </div>
             <hr>
             <div class="copyright-text mt-3 text-center">
-                <a href="">Copyright © 2021 <span class="text-dark fw-bold">Lift</span>
+                <a href="">Copyright © 2022 <span class="text-dark fw-bold">Lift</span>
                     <span class="text-danger fw-bold">Inc.</span></a>
             </div>
         </div>

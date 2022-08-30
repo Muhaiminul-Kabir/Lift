@@ -108,7 +108,7 @@ session_start();
                     data: {
                         product_code: $("#code").val(),
                         product_name: $("#name").val(),
-                        product_path: $("#path").val(),
+                        product_path: $("#path").val().match(/[^\\/]*$/)[0],
                         product_type: $("#inputGroupSelect01 :selected").text(),
                         product_qty: qty,
                         product_price: $("#price").val()

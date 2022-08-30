@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2022 at 07:59 AM
+-- Generation Time: Aug 30, 2022 at 04:46 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -48,9 +48,9 @@ INSERT INTO `admin` (`id`, `name`, `pass`) VALUES
 
 CREATE TABLE `carts` (
   `Id` int(11) NOT NULL,
-  `product` int(11) NOT NULL,
-  `user` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `product` varchar(11) NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -61,9 +61,24 @@ CREATE TABLE `carts` (
 
 CREATE TABLE `favourites` (
   `Id` int(11) NOT NULL,
-  `user` int(11) NOT NULL,
-  `product` int(11) NOT NULL
+  `user` varchar(113) NOT NULL,
+  `product` varchar(112) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `favourites`
+--
+
+INSERT INTO `favourites` (`Id`, `user`, `product`) VALUES
+(1, 'q@gmail.com', 'w2'),
+(2, 'w2', 'q@gmail.com'),
+(3, 'w2', 'q@gmail.com'),
+(4, '', ''),
+(5, '', ''),
+(6, '', ''),
+(7, '', ''),
+(8, '', ''),
+(9, 'q@gmail.com', 'w2');
 
 -- --------------------------------------------------------
 
@@ -84,11 +99,12 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `user_email`, `subject`, `text`, `reply`) VALUES
-(1, 'q@gmail.com', 'mara', 'vai valo nai', ''),
+(1, 'q@gmail.com', 'mara', 'vai valo nai', 'dardrtdwe '),
 (3, 'q@gmail.com', 'mara', 'vai valo nasjhdjsd sjdbjhdsf fjsbdfjbsjkdfdbfsdkfsdkjsdfkskfkhdkfkshdfkkdnkvhdkbvbi', ''),
-(4, '', '', '', ''),
-(5, '', '', '', ''),
-(6, '', '', '', 'tate amar ki');
+(6, '', '', '', 'tate amar ki'),
+(7, 'q@gmail.com', 'afsg', 'qwfgqwqtgwyggwygs', ''),
+(8, 'q@gmail.com', '', '', ''),
+(9, 'q@gmail.com', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -99,18 +115,11 @@ INSERT INTO `feedback` (`id`, `user_email`, `subject`, `text`, `reply`) VALUES
 CREATE TABLE `orders` (
   `Id` int(100) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `items` int(255) NOT NULL,
+  `product_code` varchar(255) NOT NULL,
   `user_email` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
+  `status` varchar(255) NOT NULL,
+  `code` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`Id`, `address`, `items`, `user_email`, `status`) VALUES
-(2, 'e', 3, '3', '3'),
-(3, 'e', 3, '3', '3');
 
 -- --------------------------------------------------------
 
@@ -122,29 +131,28 @@ CREATE TABLE `product` (
   `Id` int(11) NOT NULL,
   `Name` varchar(119) NOT NULL,
   `Price` int(11) NOT NULL,
-  `Ratings` int(11) NOT NULL,
+  `qty` varchar(255) NOT NULL,
   `type` varchar(100) NOT NULL,
-  `path` varchar(100) NOT NULL
+  `path` varchar(100) NOT NULL,
+  `code` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`Id`, `Name`, `Price`, `Ratings`, `type`, `path`) VALUES
-(1, 'Radish', 234, 2, 'vegi', ''),
-(3, 'carrot', 234, 2, 'vegi', ''),
-(4, 'Radish', 234, 2, 'vegi', ''),
-(5, 'tomato', 234, 2, 'fruit', ''),
-(6, '${name}', 0, 0, '${type}', '${path}'),
-(7, '$name', 0, 0, '$type', '$path'),
-(8, '2', 2, 0, 'Vegitables', '2'),
-(9, 'Md. Muhaiminul Kabir ', 1, 0, 'Vegitables', '1'),
-(10, 'sfdsfd', 23323, 0, '2', 'C:fakepathoffer-bg.png'),
-(11, '', 0, 0, 'Vegitables', ''),
-(12, '', 0, 0, 'Vegitables', ''),
-(13, '', 0, 0, 'Vegitables', 'C:fakepathproduct3.png'),
-(14, 'Eggs (4 pcs)', 150, 0, '4', 'C:fakepathproduct2.png');
+INSERT INTO `product` (`Id`, `Name`, `Price`, `qty`, `type`, `path`, `code`) VALUES
+(4, 's', 12, '1 pcs', 'Vegetables', 'onion3.png', 's');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -172,7 +180,20 @@ INSERT INTO `user` (`Id`, `Name`, `email`, `pass`, `Address`, `Mobile`, `path`) 
 (4, '1', '1', '1', '1', '1', '1'),
 (7, 'sSs', 'sS', 'sS', 'sS', 'sd', 'ss'),
 (15, '${name}', 'ssS', 'asS', 'asS', 'asd', 'ass'),
-(39, '${name}', 'sxsS', 'axsS', 'axsS', 'axsd', 'axss');
+(39, '${name}', 'sxsS', 'axsS', 'axsS', 'axsd', 'axss'),
+(54, 'rTwx', '190204063@aust.edu', '766666', 'bbbb', '023456789', ''),
+(55, '', '', '', '', '', ''),
+(56, 'nirjon', '1902j04063@aust.edu', 'u', 'bbbb', '023456789', ''),
+(57, 'rTwx', '19 4063@aust.edu', 'u', 'bbbb', '023456789', ''),
+(59, 'rTwx', '190@aust.edu', 'yui', 'bbbb', '023456789', ''),
+(60, 'rTwx', '063@aust.edu', 'esrfg', 'bbbb', '023456789', ''),
+(61, 'nirjon', 'j063@aust.edu', 'sdxcn', 'bbbb', '023456789', ''),
+(62, 'RTZW', 'mmmmm063@aust.edu', 'hhhhhhhhhhhhh', 'bbbb', '023456789', ''),
+(63, 'srwre', 'bb63@aust.edu', 'bbbbbbbbbb', 'bbbb', '023456789', ''),
+(64, 'haha', '193@aust.edu', 'rttttttt', 'bbbb', '023456789', ''),
+(66, 'rTwx', 't.edu', 'jjjjjjjjjjjj', 'bbbb', '023456789', ''),
+(67, 'rTwx', '1902 ust.edu', '45e', 'bbbb', '023456789', ''),
+(80, 'rTwx', 'sws', 'sws', 'ws', 'sws', '');
 
 --
 -- Indexes for dumped tables
@@ -207,13 +228,21 @@ ALTER TABLE `feedback`
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `ee` (`code`);
 
 --
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `code` (`code`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -233,16 +262,22 @@ ALTER TABLE `admin`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+
+--
 -- AUTO_INCREMENT for table `favourites`
 --
 ALTER TABLE `favourites`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -254,13 +289,19 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

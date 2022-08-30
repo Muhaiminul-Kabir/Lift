@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($resultfav)) {
         $products[$i]->name = $row['Name'];
         $products[$i]->price = $row['Price'];
         $products[$i]->qty = $row['qty'];
-        $products[$i]->path = $row['path'];
+        $products[$i]->path = 'assets/images/product/'.$row['path'];
        
         $products[$i]->type = $row['type'];
        

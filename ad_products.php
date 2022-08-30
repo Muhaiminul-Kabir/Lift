@@ -12,8 +12,7 @@
         <th style="">ID</th>
         <th style="">Price</th>
         <th style="">Type</th>
-        <th style="">Ratings</th>
-        <th style="">Action</th>
+        <th style="">Quantity</th>
 
       </tr>
       <?php  product_list() ?>

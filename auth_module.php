@@ -48,9 +48,7 @@ function login()
       
       $_SESSION['log'] = 'on';
       
-      echo '<script>document.getElementById("error").style.visibility = "visible";</script>';
-      echo '
-      <script>
+      echo '<script>document.getElementById("error").style.visibility = "visible";
       $(".close").click();
      
       localStorage.log = "on"
@@ -60,14 +58,10 @@ function login()
       
       document.getElementById("fav").style.visibility = "visible"
       document.getElementById("cart").style.visibility = "visible"
-      setTimeout(function () {
-  
-        document.getElementById("error").style.visibility = "hidden"
-        
-      }, 5000)
+     
 
-    </script>
-    <div class="fixed-top alert alert-success alert-dismissible fade show" role="alert";>
+    </script>';
+    echo '<div class="fixed-top alert alert-success alert-dismissible fade show" role="alert";>
       <strong>Login successful!</strong> Welcome <b>' . $user->name . '</b>
       
       </div>';

@@ -18,7 +18,7 @@
                         <label for="inputGroupSelect01">Type:</label>
 
                         <select class="form-select form-select-sm" id="inputGroupSelect01" aria-label=".form-select-sm example">
-                                <option selected>Vegitables</option>
+                                <option selected>Vegetables</option>
                                 <option value="1">Vegetables</option>
                                 <option value="2">Fruits</option>
                                 <option value="3">Spices</option>

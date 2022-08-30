@@ -65,7 +65,8 @@ function choice_filter()
                 $products[$i]->name = $row['Name'];
                 $products[$i]->price = $row['Price'];
                 $products[$i]->qty = $row['qty'];
-                $products[$i]->path = $row['path'];
+                $products[$i]->path = 'assets/images/product/'.$row['path'];
+       
 
                 $products[$i]->type = $row['type'];
 
@@ -73,7 +74,7 @@ function choice_filter()
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body text-center">
-                            <img src="assets/images/product/product27.png" alt="">
+                            <img src="'.$products[$i]->path.'" alt="">
                             <h2 class="product_name">
                                 <p>' . $products[$i]->name . '</p>
                             </h2>

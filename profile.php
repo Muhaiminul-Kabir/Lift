@@ -1,5 +1,5 @@
 <?php
-        include 'session.php';
+        session_start();
 
 ?>
 
@@ -42,7 +42,7 @@
                                                         <p class="text-muted mb-4"><?php echo $_SESSION['userAddress']; ?></p>
                                                         <div class="d-flex justify-content-center mb-2">
                                                              
-                                                                <button type="button" class="btn btn-outline-primary ms-1">Edit</button>
+                                                                
                                                         </div>
                                                 </div>
                                         </div>
@@ -88,43 +88,7 @@
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div class="row">
-                                                <div class="col-md-8">
-                                                        <div class="card mb-4 mb-md-0">
-                                                                <div class="card-body">
-                                                                        <p class="mb-4"><span class="text-primary font-italic me-1"></span> Statistics
-                                                                        </p>
-                                                                        <div class="mx-4">
-                                                                                <div class="row mt-2 h5 d-flex justify-content-between">
-                                                                                        <p class="mb-1 col-md-4 " style="font-size: .77rem;">Orders</p>
-                                                                                        <div class="col-md-4" style="height: 5px;">
-                                                                                                46
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="row mt-2 h5 d-flex justify-content-between">
-                                                                                        <p class="mb-1 col-md-4" style="font-size: .77rem;">Pending</p>
-                                                                                        <div class="col-md-4 " style="height: 5px;">
-                                                                                                46
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="row mt-2 h5 d-flex justify-content-between">
-                                                                                        <p class="mb-1 col-md-4" style="font-size: .77rem;">Recieved</p>
-                                                                                        <div class="col-md-4" style="height: 5px;">
-                                                                                                46
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="row mt-2 h5 d-flex justify-content-between">
-                                                                                        <p class="mb-1 col-md-4" style="font-size: .77rem;">Purchase</p>
-                                                                                        <div class="col-md-4" style="height: 5px;">
-                                                                                                46
-                                                                                        </div>
-                                                                                </div>
-
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
+                                        
                                 </div>
                         </div>
                 </div>

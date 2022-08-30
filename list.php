@@ -67,8 +67,7 @@
                             <div class="col-lg-6">
                                 <div class="card border-0 shadow-sm">
                                     <div class="card-body text-center">
-                                        <img src="assets/images/product/product27.png" alt="">
-                                        <h2 id="pn" class="product_name">
+                                        <img src="'.$products[$j]->path.'" class="product_name">
                                             <p>' . $products[$j]->name . '</p>
                                         </h2>
                                         <div class="rating">
@@ -79,7 +78,7 @@
                                             <a onclick="return add(\'' . $products[$j]->code . '\',' . $products[$j]->price . ')"  class="add-to-cart-btn">
                                                 <i class="bi bi-cart4"></i> Add to Cart
                                             </a>
-                                            <a  class="add-to-favorite text-success">
+                                            <a onclick="return adda(\'' . $products[$j]->code . '\')"  class="add-to-favorite text-success">
                                                 <i class="bi bi-heart "></i>
                                             </a>
                                         </div>
@@ -116,6 +115,36 @@
         var price = ''
         var qty = ''
 
+        function adda(pname) {
+            
+            code = pname            
+            
+
+            if (localStorage.log == 'on') {
+                var a = document.getElementById('cart-icon').textContent;
+                var b = parseInt(a);
+                b++
+                document.getElementById('cart-icon').innerHTML = b;
+                $.ajax({
+                    type: "POST",
+                    url: "addToFav_product_module.php",
+                    data: {
+
+                        product_code: code,
+                        product_user: localStorage.userEmail,
+                        
+                    },
+                    success: function(result, status, xhr) {
+
+                        $("#error").html(result);
+                    }
+                });
+            } else {
+                $('#staticBackdrop').modal('show');
+
+            }
+
+        }
         function add(pname,  pprice) {
             
             code = pname            
@@ -152,20 +181,7 @@
         }
         $(document).ready(function() {
             
-            $('.add-to-favorite').click(function(e) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "addToFav_product_module.php",
-                    data: {
-                        choice: $("#choice1").val()
-                    },
-                    success: function(result, status, xhr) {
-
-                        $("#list").html(result);
-                    }
-                });
-            });
+          
 
             $('#choice1').click(function(e) {
 

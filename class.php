@@ -15,7 +15,15 @@ class user
 }
 
 
+class ms
+{
+        public $id;
+        public $subject;
+        public $user_email;
+        public $text;
+        public $ans ;
 
+}
 
 class fb
 {

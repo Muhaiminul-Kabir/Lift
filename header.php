@@ -25,7 +25,7 @@ include 'cart_data.php';
                                                 <a class="nav-link" href="contact.php">Contact us</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link " href="#">About us</a>
+                                                <a class="nav-link " href="about_us.php">About us</a>
                                         </li>
                                 </ul>
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 action-menu">
@@ -38,7 +38,7 @@ include 'cart_data.php';
                                                         Log in
                                                 </button>
                                                 
-                                                <button type="button" id="to-regi" class="btn btn-warning">
+                                                <button onclick="location.replace('register.php')"type="button" id="to-regi" class="btn btn-warning">
                                                         Sign up
                                                 </button>
                                         </li>
@@ -63,7 +63,7 @@ include 'cart_data.php';
 
 
                                                         <li><a id="mp" class="dropdown-item" href="profile.php">Profile</a></li>
-                                                        <li><a id="mp" class="dropdown-item" href="profile.php">Reports</a></li>
+                                                        <li><a id="mp" class="dropdown-item" href="myreport.php">Reports</a></li>
                                                         <button type="button" id="log-out" class="dropdown-item">
                                                                 <i class="bi bi-box-arrow-left"></i>
                                                                 Log out</button>

@@ -3,7 +3,7 @@
         <div class="modal-dialog">
                 <div class="modal-content">
                         <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">Sign in</h5>
                                 <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -19,11 +19,13 @@
                 </div>
         </div>
 </div>
+
 <!--Error-->
 <div style="" id="error"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+        
         if (localStorage.log != 'on') {
                 document.getElementById("init-element").style.visibility = "visible"
                 document.getElementById("user-panel").style.visibility = "hidden"

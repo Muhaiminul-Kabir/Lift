@@ -15,10 +15,9 @@ function product_list()
                     <td>' . $products[$j]->code. '</td>
                     <td>' . $products[$j]->price . '</td>
                     <td>' . $products[$j]->type . '</td>
-                    <td>' . $products[$j]->rate . '</td>
+                    <td>' . $products[$j]->qty . '</td>
             
-                    <td><button class="text-light shadow btn btn-danger">Delete</button></td>
-                  </tr>';
+                     </tr>';
 
 
                 $j++;
