@@ -13,7 +13,7 @@
         <th style="">Status</th>
         <th style="">Email</th>
         <th style="">Address</th>
-        <th style="">Action</th>
+         
 
       </tr>
     <?php 

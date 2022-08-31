@@ -45,7 +45,7 @@ session_start();
                 </div>
             </div>
             <!-- Panel -->
-            <div class="col-9 shadow-lg p-3 bg-secondary  rounded " style="color: white;height:550px;">
+            <div class="col-9 shadow-lg p-3 bg-secondary  rounded " style="color: white;height:650px;">
 
                 <div class="row p-2" id="d1">
 

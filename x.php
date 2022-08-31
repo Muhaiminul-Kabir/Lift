@@ -1,14 +1,14 @@
 <?php
 function msg_list_us()
 {
-        include 'msg_data.php';
+        include 'msg_data_us.php';
 
         $j = 0;
 
         while ($j < $k) {
                 $rating = '';
                 $stat = '';
-                if($msg1[$j]->ans != ''){
+                if($msg1[$j]->ans == ''){
                         $stat = '<span class="text-danger">Not answered</span>';
                 }else{
                         $stat = '<span class="text-success">Answered</span>';

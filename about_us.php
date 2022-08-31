@@ -49,8 +49,46 @@
                         
                 </div>
         </div>
+
+        <!--Footer section-->
+    <footer class="border-top py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="assets/images/ecommerce-logo-png-11.png" height="40" alt="">
+
+                </div>
+                <div class="col-lg-3">
+                    <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li><a href="about_us.php">About us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>User Area</h4>
+                    <ul class="footer-list">
+                        <li><a onclick="showFoo()" id="to-admin-panel">Admin login</a></li>
+                     
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Contact Info</h4>
+                    <p>01707273738</p>
+                    <p>509 724 580 - issued in Dhaka (DHA) on 03/11/2022, expires 08/11/2023</p>
+                    <p>support@lift.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright-text mt-3 text-center">
+                <a href="">Copyright © 2022 <span class="text-dark fw-bold">Lift</span>
+                    <span class="text-danger fw-bold">Inc.</span></a>
+            </div>
+        </div>
+    </footer>
         
     <?php include 'logic.php';?>
+    <script src="assets/js/footer.js"></script>
     
 </body>
 

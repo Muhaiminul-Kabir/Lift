@@ -353,16 +353,13 @@
                 <div class="col-lg-3">
                     <h4>Information</h4>
                     <ul class="footer-list">
-                        <li><a href="">About us</a></li>
+                        <li><a href="about_us.php">About us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h4>User Area</h4>
                     <ul class="footer-list">
-                        <li><a href="">My account</a></li>
-                        <li><a href="">My Cart</a></li>
-                        <li><a href="login.php">Login</a></li>
                         <li><a onclick="showFoo()" id="to-admin-panel">Admin login</a></li>
                      
                     </ul>

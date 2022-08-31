@@ -25,7 +25,7 @@ $resultx = mysqli_query($link, $sqlx);
 
 //noofdata
 
-$noOfDatax = mysqli_num_rows($resultx);
+$noOfData1x = mysqli_num_rows($resultx);
 
 
 

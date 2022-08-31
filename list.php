@@ -47,6 +47,7 @@
                         <li id="choice2" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="1"> Fruits <span class="badge badge-primary badge-pill"><?php echo $noOfDataf; ?></span> </li>
                         <li id="choice3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="2"> Spices <span class="badge badge-primary badge-pill"><?php echo $noOfDatas; ?></span> </li>
                         <li id="choice4" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category " value="3">Others <span class="badge badge-primary badge-pill"><?php echo $noOfDatao; ?></span> </li>
+                        <a href="list.php" > <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"> All <span class="badge badge-primary badge-pill"><?php echo $noOfDatax; ?></span> </li> </a> 
                     </ul>
                 </div>
 
@@ -54,7 +55,7 @@
         </div>
 
         <section id="products">
-            <div class="container py-3 x" style="height:500px;">
+            <div class="container py-3 x" style="height:650px;">
                 <div id='list' class="row v1">
 
                     <?php

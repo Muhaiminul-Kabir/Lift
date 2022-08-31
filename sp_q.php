@@ -29,11 +29,18 @@
 
 
 
-        <p id="e"> </p>
-        <div class="my-3" style="">
+        
+        <div class="my-3 mx-3" style="">
                 
 
-                        <h5 id="pa" style="max-width:600px;word-wrap:break-word;"></h5>
+                        <h2 id="pa" style="max-width:600px;word-wrap:break-word;"></h2>
+
+                
+        </div>
+        <div class="mx-3" style="">
+                
+
+                <span><b>Replied:</b><br> </span><h5 id="e"> </h5>
 
                 
         </div>

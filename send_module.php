@@ -3,7 +3,7 @@ function insert_user()
 {
 
         include 'connection.php';
-session_start();
+        session_start();
         $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
         $name = $_POST['name'];
         $pass = $_POST['pass'];

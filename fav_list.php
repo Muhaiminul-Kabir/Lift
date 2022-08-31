@@ -62,7 +62,7 @@
                             <div class="col-lg-6">
                                 <div class="card border-0 shadow-sm">
                                     <div class="card-body text-center">
-                                        <img src="assets/images/product/product27.png" alt="">
+                                        <img src="'.$products[$j]->path.'" alt="">
                                         <h2 id="pn" class="product_name">
                                             <p>' . $products[$j]->name . '</p>
                                         </h2>
