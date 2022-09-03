@@ -19,7 +19,7 @@ Plugins used :
 
 ## YouTube
 Demonstration video at<br>
-https://youtube.com/watch?v=6ulpXz6kt4A&feature=youtu.be
+https://youtu.be/5yUxbuMVVso
 
 
 ## Collaborators
